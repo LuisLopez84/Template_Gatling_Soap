@@ -28,4 +28,13 @@ Feature: Servicio SOAP Add
     # Se ejecuta la misma operación
     When se ejecuta la petición Add
     # Se espera como resultado el otro valor
-    Then el resultado debe ser 3
+    Then el resultado debe ser 2
+
+   # Este escenario prueba un caso de error donde el resultado de la suma no corresponde
+  Scenario: Suma de un valor entero positivo y un entero negativo
+    # Se define un valor cero y otro positivo
+    Given los valores 9 y 9
+    # Se ejecuta la misma operación
+    When se ejecuta la petición Add
+    # Se espera como resultado el otro valor
+    Then el resultado debe ser 20
