@@ -51,7 +51,7 @@ public class AddSteps {
         // Captura la respuesta
         InputStream responseStream = connection.getInputStream();
 
-        // Parsear XML de respuesta para obtener AddResult
+        //Parsear XML de respuesta para obtener AddResult
         Document responseDoc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(responseStream);
         XPath xpath = XPathFactory.newInstance().newXPath();
         String resultString = xpath.evaluate("//*[local-name()='AddResult']/text()", responseDoc);
@@ -61,6 +61,7 @@ public class AddSteps {
 
     @Then("el resultado debe ser {int}")
     public void el_resultado_debe_ser(int expected) {
+        // Asserciones
         Assertions.assertEquals(expected, actualResult, "El resultado de la suma no es correcto.");
     }
 }
