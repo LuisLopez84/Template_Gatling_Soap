@@ -31,7 +31,7 @@ Feature: Servicio SOAP Add
     Then el resultado debe ser 2
 
    # Este escenario prueba un caso de error donde el resultado de la suma no corresponde
-  Scenario: Suma de un valor entero positivo y un entero negativo
+  Scenario: Suma de dos valores positivos con resultado de error
     # Se define un valor cero y otro positivo
     Given los valores 9 y 9
     # Se ejecuta la misma operación
